@@ -38,17 +38,19 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+let logo = document.getElementById('logo-img');
+logo.setAttribute('src', siteContent['nav']['img-src'])
 
 // Adding navbar
 let navigation = document.querySelectorAll('nav a');
 
 navigation.forEach((link, index) => {
-  link.textContent = siteContent["nav"][`nav-item-${index + 1}`];
+  link.textContent = siteContent['nav'][`nav-item-${index + 1}`];
 });
 
 //Top Page Content
 const topPageContent = document.querySelector('.cta-text h1');
-
 topPageContent.textContent = siteContent["cta"]["h1"];
+
+const ctaButton = document.querySelector('button');
+ctaButton.textContent = siteContent['cta']['button'];
