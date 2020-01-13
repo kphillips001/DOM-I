@@ -52,9 +52,28 @@ navigation.forEach((link, index) => {
 const topPageContent = document.querySelector('.cta-text h1');
 topPageContent.textContent = siteContent["cta"]["h1"];
 
+//Update Button
 const ctaButton = document.querySelector('button');
 ctaButton.textContent = siteContent['cta']['button'];
 
 //Adding Image
 const ctaImage = document.getElementById('cta-img');
-ctaImage.src = siteContent["cta"]["img-src"];
+ctaImage.src = siteContent['cta']['img-src'];
+
+//Main Content
+
+let mainContent = document.querySelector('.main-content').querySelectorAll('.text-content');
+
+const features = document.querySelectorAll("h4");
+features[0].textContent = siteContent["main-content"]["features-h4"];
+features[1].textContent = siteContent["main-content"]["about-h4"];
+features[2].textContent = siteContent["main-content"]["services-h4"];
+features[3].textContent = siteContent["main-content"]["product-h4"];
+features[4].textContent = siteContent["main-content"]["vision-h4"];
+
+const paragraph = document.querySelectorAll("p");
+paragraph[0].textContent = siteContent["main-content"]["features-content"];
+paragraph[1].textContent = siteContent["main-content"]["about-content"];
+paragraph[2].textContent = siteContent["main-content"]["services-content"];
+paragraph[3].textContent = siteContent["main-content"]["product-content"];
+paragraph[4].textContent = siteContent["main-content"]["vision-content"];
