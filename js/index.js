@@ -54,3 +54,7 @@ topPageContent.textContent = siteContent["cta"]["h1"];
 
 const ctaButton = document.querySelector('button');
 ctaButton.textContent = siteContent['cta']['button'];
+
+//Adding Image
+const ctaImage = document.getElementById('cta-img');
+ctaImage.src = siteContent["cta"]["img-src"];
