@@ -77,3 +77,7 @@ paragraph[1].textContent = siteContent["main-content"]["about-content"];
 paragraph[2].textContent = siteContent["main-content"]["services-content"];
 paragraph[3].textContent = siteContent["main-content"]["product-content"];
 paragraph[4].textContent = siteContent["main-content"]["vision-content"];
+
+//Middle Image
+let midImage = document.querySelector('.middle-img');
+midImage.src = siteContent['main-content']['middle-img-src'];
