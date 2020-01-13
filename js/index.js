@@ -97,3 +97,20 @@ contactEmail.textContent = siteContent['contact']['email'];
 
 const Footer = document.querySelector('footer');
 Footer.textContent = siteContent['footer']['copyright'];
+
+//Use .prepend() to add Mission to navbar
+const missionLink = document.createElement('a');
+missionLink.href = "#";
+missionLink.textContent = 'Mission';
+
+document.querySelector('nav').prepend(missionLink);
+
+// Use .appendChild() to add a new Login to the navigation
+const loginLink = document.createElement('a');
+loginLink.href = "#";
+loginLink.textContent = 'Login';
+
+document.querySelector('nav').appendChild(loginLink);
+
+//Change nav links to green
+document.querySelectorAll('nav a').forEach(link => link.style.color = 'green');
