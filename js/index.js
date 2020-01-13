@@ -41,9 +41,14 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-// Adding nav bar
+// Adding navbar
 let navigation = document.querySelectorAll('nav a');
 
 navigation.forEach((link, index) => {
   link.textContent = siteContent["nav"][`nav-item-${index + 1}`];
 });
+
+//Top Page Content
+const topPageContent = document.querySelector('.cta-text h1');
+
+topPageContent.textContent = siteContent["cta"]["h1"];
