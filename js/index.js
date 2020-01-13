@@ -86,11 +86,14 @@ midImage.src = siteContent['main-content']['middle-img-src'];
 const contact = document.querySelector('.contact h4');
 contact.textContent = siteContent['contact']['contact-h4']; 
 
-const contactAddress = document.querySelector(".contact p:nth-child(2)");
-contactAddress.textContent = siteContent["contact"]["address"];
+const contactAddress = document.querySelector('.contact p:nth-child(2)');
+contactAddress.textContent = siteContent['contact']['address'];
 
-const contactPhone = document.querySelector(".contact p:nth-child(3)");
-contactPhone.textContent = siteContent["contact"]["phone"];
+const contactPhone = document.querySelector('.contact p:nth-child(3)');
+contactPhone.textContent = siteContent['contact']['phone'];
 
-const contactEmail = document.querySelector(".contact p:nth-child(4)");
-contactEmail.textContent = siteContent["contact"]["email"];
+const contactEmail = document.querySelector('.contact p:nth-child(4)');
+contactEmail.textContent = siteContent['contact']['email'];
+
+const Footer = document.querySelector('footer');
+Footer.textContent = siteContent['footer']['copyright'];
