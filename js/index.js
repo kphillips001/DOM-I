@@ -81,3 +81,16 @@ paragraph[4].textContent = siteContent["main-content"]["vision-content"];
 //Middle Image
 let midImage = document.querySelector('.middle-img');
 midImage.src = siteContent['main-content']['middle-img-src'];
+
+//Contact Section
+const contact = document.querySelector('.contact h4');
+contact.textContent = siteContent['contact']['contact-h4']; 
+
+const contactAddress = document.querySelector(".contact p:nth-child(2)");
+contactAddress.textContent = siteContent["contact"]["address"];
+
+const contactPhone = document.querySelector(".contact p:nth-child(3)");
+contactPhone.textContent = siteContent["contact"]["phone"];
+
+const contactEmail = document.querySelector(".contact p:nth-child(4)");
+contactEmail.textContent = siteContent["contact"]["email"];
