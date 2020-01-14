@@ -38,5 +38,79 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+let logo = document.getElementById('logo-img');
+logo.setAttribute('src', siteContent['nav']['img-src'])
+
+// Adding navbar
+let navigation = document.querySelectorAll('nav a');
+
+navigation.forEach((link, index) => {
+  link.textContent = siteContent['nav'][`nav-item-${index + 1}`];
+});
+
+//Top Page Content
+const topPageContent = document.querySelector('.cta-text h1');
+topPageContent.textContent = siteContent["cta"]["h1"];
+
+//Update Button
+const ctaButton = document.querySelector('button');
+ctaButton.textContent = siteContent['cta']['button'];
+
+//Adding Image
+const ctaImage = document.getElementById('cta-img');
+ctaImage.src = siteContent['cta']['img-src'];
+
+//Main Content
+
+let mainContent = document.querySelector('.main-content').querySelectorAll('.text-content');
+
+const features = document.querySelectorAll("h4");
+features[0].textContent = siteContent["main-content"]["features-h4"];
+features[1].textContent = siteContent["main-content"]["about-h4"];
+features[2].textContent = siteContent["main-content"]["services-h4"];
+features[3].textContent = siteContent["main-content"]["product-h4"];
+features[4].textContent = siteContent["main-content"]["vision-h4"];
+
+const paragraph = document.querySelectorAll("p");
+paragraph[0].textContent = siteContent["main-content"]["features-content"];
+paragraph[1].textContent = siteContent["main-content"]["about-content"];
+paragraph[2].textContent = siteContent["main-content"]["services-content"];
+paragraph[3].textContent = siteContent["main-content"]["product-content"];
+paragraph[4].textContent = siteContent["main-content"]["vision-content"];
+
+//Middle Image
+let midImage = document.querySelector('.middle-img');
+midImage.src = siteContent['main-content']['middle-img-src'];
+
+//Contact Section
+const contact = document.querySelector('.contact h4');
+contact.textContent = siteContent['contact']['contact-h4']; 
+
+const contactAddress = document.querySelector('.contact p:nth-child(2)');
+contactAddress.textContent = siteContent['contact']['address'];
+
+const contactPhone = document.querySelector('.contact p:nth-child(3)');
+contactPhone.textContent = siteContent['contact']['phone'];
+
+const contactEmail = document.querySelector('.contact p:nth-child(4)');
+contactEmail.textContent = siteContent['contact']['email'];
+
+const Footer = document.querySelector('footer');
+Footer.textContent = siteContent['footer']['copyright'];
+
+//Use .prepend() to add Mission to navbar
+const missionLink = document.createElement('a');
+missionLink.href = "#";
+missionLink.textContent = 'Mission';
+
+document.querySelector('nav').prepend(missionLink);
+
+// Use .appendChild() to add a new Login to the navigation
+const loginLink = document.createElement('a');
+loginLink.href = "#";
+loginLink.textContent = 'Login';
+
+document.querySelector('nav').appendChild(loginLink);
+
+//Change nav links to green
+document.querySelectorAll('nav a').forEach(link => link.style.color = 'green');
